@@ -48,11 +48,11 @@ export class Todo extends React.Component {
 	};
 
 	taskCounter = len => {
-		console.log(len);
-		if (len === 0) {
+		const leng = len - 2;
+		if (leng === 0) {
 			return <li className="taskCounter text-muted">No tasks, add a task</li>;
-		} else if (len >= 1) {
-			return <li className="taskCounter text-muted">{len} items left</li>;
+		} else if (leng >= 1) {
+			return <li className="taskCounter text-muted">{leng} items left</li>;
 		}
 	};
 	render() {
